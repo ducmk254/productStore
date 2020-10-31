@@ -2,12 +2,12 @@ const indexController = require("../controllers/index.controller");
 
 module.exports = (app)=>{
     app.route("/")
-        .get((req,res)=> res.status(200).json({Message:"Homepage"}))
+        .get(indexController.homepageController.homepage)
+
+
     app.route("/api/v0/books")
         .get(indexController.bookController.getBookList)
         .post(indexController.bookController.createABook)
-
-
     app.route("/api/v0/book/:book_id")
         .get(indexController.bookController.getBook)
         .put(indexController.bookController.updateBook)
