@@ -4,5 +4,6 @@ module.exports = {
     authorController: require("./author.controller"),
     nxbController: require("./nxb.controller"),
     bookcomment : require("./bookcomment.controller"),
-    customer    : require("./customer.controller")
+    customer    : require("./customer.controller"),
+    userController: require("./user.controller")
 }

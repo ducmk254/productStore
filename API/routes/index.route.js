@@ -44,4 +44,11 @@ module.exports = (app)=>{
     app.route("/api/v0/customer/:customer_id")
         .get(indexController.customer.getCustomer)
         .put(indexController.customer.updateCustomer)
+
+    app.route("/api/v0/users")
+        .get(indexController.userController.getUserList)
+        .post(indexController.userController.createUser)
+    app.route("/api/v0/user:/user_id")
+        .get(indexController.userController.getUser)
+        .put(indexController.userController.changeUser)
 }
