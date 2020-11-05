@@ -27,7 +27,11 @@ const userSchema = new mongoose.Schema({
     },
     descreption: {
         type:String
-    }
+    },
+    access_token:[{
+        type:String,
+        default:""
+    }]
 });
 
 module.exports = mongoose.model("user",userSchema);
